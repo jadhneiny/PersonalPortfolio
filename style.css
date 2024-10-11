@@ -46,21 +46,62 @@ nav ul li a {
     background-position: center;
     background-attachment: fixed;
     color: #fff;
+    flex-direction: column; 
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    letter-spacing: 2px; 
+}
+
+.hero p {
+    font-size: 1.5rem; 
+    margin-bottom: 30px; 
+    line-height: 1.4;
+    letter-spacing: 1px;
 }
 
 .cta {
-    background-color: #007bff;
+    background-color: #ff5733;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
+    padding: 15px 30px; 
     text-decoration: none;
-    margin-top: 20px;
-    display: inline-block;
+    font-size: 1.2rem; 
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .cta:hover {
-    background-color: #0056b3;
-    transition: background-color 0.3s;
+    background-color: #ff3300; 
+    transform: scale(1.05);
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero {
+        background-position: top;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; 
+    }
+
+    .hero p {
+        font-size: 1.2rem; 
+    }
+
+    .cta {
+        font-size: 1rem;
+        padding: 12px 25px; 
+    }
 }
 
 /* About, Projects, Skills, and Contact Styles */
@@ -77,15 +118,4 @@ h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media(max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .hero {
-        background-position: top;
-    }
 }
