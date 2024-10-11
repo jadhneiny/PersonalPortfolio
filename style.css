@@ -41,6 +41,7 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-image: url('background.JPG');
     background-size: cover;
     background-position: center;
     color: #fff;
