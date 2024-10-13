@@ -73,9 +73,9 @@ h2::after {
     align-items: center;
     text-align: center;
     background-image: url('background.JPG');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
     color: #fff;
     padding: 0 20px;
 }
@@ -128,26 +128,49 @@ section h3 {
 }
 
 ul {
-    margin-left: 20px;
+    margin-left: 0;
     padding-left: 0;
+    list-style: none;
 }
 
 ul li {
-    list-style: none;
-    position: relative;
     margin-bottom: 15px;
     font-size: 1rem;
-    padding-left: 25px;
+    padding-left: 0;
     color: #666;
 }
 
-ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    top: 0;
+/* Skills Section */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+#skills ul li {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills ul li:hover {
+    transform: translateY(-5px);
+}
+
+#skills ul li i {
+    font-size: 2rem;
+    margin-bottom: 10px;
     color: #ff5733;
-    font-size: 1.5rem;
 }
 
 /* Divider Lines for Sections */
@@ -160,32 +183,15 @@ section + section {
     padding-top: 60px;
 }
 
-/* Skills Section */
-#skills ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-#skills ul li {
-    background-color: #f5f5f5;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #333;
-}
-
 /* Certifications Section */
 #certifications ul li {
-    padding-left: 25px;
+    padding-left: 0;
     font-size: 1.1rem;
 }
 
 /* Volunteering Section */
 #volunteering ul li {
-    padding-left: 25px;
+    padding-left: 0;
     font-size: 1.1rem;
 }
 
