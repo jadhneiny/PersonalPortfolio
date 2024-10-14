@@ -24,6 +24,9 @@ header {
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
@@ -53,7 +56,7 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .dark-mode-btn:hover {
@@ -94,8 +97,7 @@ h2::after {
     align-items: center;
     text-align: center;
     background-image: url('background.JPG');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     color: #fff;
     padding: 0 20px;
@@ -188,12 +190,6 @@ ul li {
     transform: translateY(-5px);
 }
 
-#skills ul li i {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #ff5733;
-}
-
 /* Divider Lines for Sections */
 section {
     margin-bottom: 60px;
@@ -202,49 +198,6 @@ section {
 section + section {
     border-top: 1px solid #ddd;
     padding-top: 60px;
-}
-
-/* Certifications Section */
-#certifications ul li {
-    padding-left: 0;
-    font-size: 1.1rem;
-}
-
-/* Volunteering Section */
-#volunteering ul li {
-    padding-left: 0;
-    font-size: 1.1rem;
-}
-
-/* Contact Form */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-form input, form textarea {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-form button {
-    padding: 15px;
-    background-color: #ff5733;
-    color: #fff;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #ff3300;
 }
 
 /* Dark Mode Styles */
