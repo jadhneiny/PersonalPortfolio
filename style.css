@@ -23,10 +23,7 @@ header {
     background-color: #222;
     color: #fff;
     padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 20px;
+    text-align: center;
 }
 
 nav ul {
@@ -47,19 +44,6 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #ff5733;
     border-radius: 5px;
-}
-
-.dark-mode-btn {
-    background-color: #ff5733;
-    color: #fff;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.dark-mode-btn:hover {
-    background-color: #ff3300;
 }
 
 /* Section Styling */
@@ -96,7 +80,8 @@ h2::after {
     align-items: center;
     text-align: center;
     background-image: url('background.JPG');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
     color: #fff;
     padding: 0 20px;
@@ -189,6 +174,12 @@ ul li {
     transform: translateY(-5px);
 }
 
+#skills ul li i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff5733;
+}
+
 /* Divider Lines for Sections */
 section {
     margin-bottom: 60px;
@@ -199,36 +190,47 @@ section + section {
     padding-top: 60px;
 }
 
-/* Dark Mode Styles */
-body.dark-theme {
-    background-color: #121212;
+/* Certifications Section */
+#certifications ul li {
+    padding-left: 0;
+    font-size: 1.1rem;
+}
+
+/* Volunteering Section */
+#volunteering ul li {
+    padding-left: 0;
+    font-size: 1.1rem;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input, form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 15px;
+    background-color: #ff5733;
     color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-body.dark-theme header {
-    background-color: #333;
-}
-
-body.dark-theme nav ul li a {
-    color: #ddd;
-}
-
-body.dark-theme nav ul li a:hover {
-    background-color: #444;
-}
-
-body.dark-theme .dark-mode-btn {
-    background-color: #444;
-    color: #fff;
-}
-
-body.dark-theme .dark-mode-btn:hover {
-    background-color: #555;
-}
-
-body.dark-theme section {
-    background-color: #222;
-    color: #ddd;
+form button:hover {
+    background-color: #ff3300;
 }
 
 /* Footer */
@@ -237,7 +239,6 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    margin-top: auto;
 }
 
 footer .social-icons {
