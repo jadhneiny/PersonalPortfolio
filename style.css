@@ -23,10 +23,10 @@ header {
     background-color: #222;
     color: #fff;
     padding: 1rem 0;
-    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 20px;
 }
 
 nav ul {
@@ -56,7 +56,6 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 20px;
 }
 
 .dark-mode-btn:hover {
