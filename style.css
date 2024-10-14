@@ -8,96 +8,67 @@
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
-    color: #333;
     background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
+    color: #333;
 }
 
-body {
-    flex-grow: 1;
-    line-height: 1.6;
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
-
-/* Header Section */
 header {
     background-color: #222;
-    color: #fff;
-    padding: 1.5rem 0;
+    padding: 20px 0;
     text-align: center;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
+    list-style: none;
 }
 
 nav ul li a {
     color: #fff;
-    text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
-    transition: color 0.3s, background-color 0.3s;
-    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #ff5733;
-    color: #fff;
     border-radius: 5px;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
+    background: url('background.JPG') no-repeat center center;
+    background-size: cover;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url('background.JPG');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
     text-align: center;
-    padding: 0 20px;
-    position: relative;
+    color: #fff;
 }
 
-.hero h1 {
+.hero .content h1 {
     font-size: 5rem;
-    font-weight: bold;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    letter-spacing: 2px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-.hero p {
-    font-size: 1.7rem;
+.hero .content p {
+    font-size: 1.5rem;
     margin-bottom: 40px;
-    line-height: 1.6;
-    letter-spacing: 1px;
-    max-width: 800px;
 }
 
 .cta {
     background-color: #ff5733;
-    color: #fff;
-    padding: 15px 40px;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
     text-decoration: none;
-    font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 50px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta:hover {
@@ -105,243 +76,150 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
-/* Section General Styles */
+/* Section Styling */
 section {
     padding: 80px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.section-content {
     max-width: 1200px;
     margin: 0 auto;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 40px;
     font-size: 2.5rem;
+    margin-bottom: 40px;
     color: #333;
-    text-transform: uppercase;
-}
-
-section + section {
-    border-top: 1px solid #ddd;
-    padding-top: 60px;
-}
-
-/* About Section */
-#about {
-    background-color: #fff;
-}
-
-#about p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #555;
-    text-align: center;
 }
 
 /* Experience Section */
-#experience {
-    background-color: #f9f9f9;
-}
-
-#experience .experience-item {
+.experience-item {
     margin-bottom: 40px;
-    text-align: center;
 }
 
-#experience h3 {
+.experience-item h3 {
     font-size: 1.8rem;
     color: #333;
-    margin-bottom: 15px;
 }
 
-#experience p {
+.experience-item p {
     font-size: 1rem;
     color: #666;
-    margin-bottom: 20px;
-}
-
-#experience .experience-item p,
-#experience .experience-item div {
-    font-size: 1rem;
 }
 
 /* Projects Section */
-#projects {
-    background-color: #fff;
-}
-
-.project-list {
+.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
-.project-item {
-    background-color: #f1f1f1;
+.project-card {
+    background-color: #f5f5f5;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: center;
+    transition: box-shadow 0.3s ease;
 }
 
-.project-item h3 {
-    font-size: 1.8rem;
+.project-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
     color: #333;
 }
 
-.project-item p {
+.project-card p {
     font-size: 1rem;
-    color: #555;
+    margin-bottom: 20px;
+    color: #666;
 }
 
-.project-item a {
+.project-card a {
     color: #ff5733;
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: bold;
 }
 
-.project-item a:hover {
-    color: #ff3300;
+.project-card:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Skills Section */
-#skills {
-    background-color: #f9f9f9;
-}
-
-#skills ul {
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    list-style: none;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
 }
 
-#skills ul li {
+.skill-box {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     font-weight: bold;
-    color: #333;
-    transition: transform 0.2s, box-shadow 0.3s;
+    transition: transform 0.3s ease;
 }
 
-#skills ul li:hover {
+.skill-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Contact Section */
 .contact-section {
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 60px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-section h2 {
+    margin-bottom: 30px;
     color: #333;
-    margin-bottom: 40px;
 }
 
-.contact-section .form-group {
-    margin-bottom: 20px;
+.form-group {
+    margin-bottom: 15px;
 }
 
-.contact-section input,
-.contact-section textarea {
+input, textarea {
     width: 100%;
     padding: 15px;
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
+    margin-bottom: 20px;
 }
 
-.contact-section input:focus,
-.contact-section textarea:focus {
-    border-color: #ff5733;
-    box-shadow: 0 0 5px rgba(255, 87, 51, 0.3);
-}
-
-.contact-section textarea {
-    min-height: 150px;
-}
-
-.contact-section button {
+button {
     background-color: #ff5733;
     color: #fff;
-    padding: 15px 40px;
+    padding: 15px 30px;
     border: none;
     border-radius: 8px;
-    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.2s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.2rem;
 }
 
-.contact-section button:hover {
+button:hover {
     background-color: #ff3300;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Footer */
 footer {
     background-color: #222;
-    color: #fff;
-    padding: 30px 0;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    border-top: 3px solid #ff5733;
-}
-
-footer .social-icons {
-    margin-top: 15px;
 }
 
 footer .social-icons a {
     color: #fff;
     margin: 0 15px;
-    font-size: 1.8rem;
-    transition: color 0.3s;
+    font-size: 1.5rem;
 }
 
 footer .social-icons a:hover {
     color: #ff5733;
-}
-
-/* Media Queries for smaller screens */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        padding-bottom: 10px;
-    }
-
-    .hero h1 {
-        font-size: 3.5rem;
-    }
-
-    .hero p {
-        font-size: 1.4rem;
-    }
-
-    .cta {
-        font-size: 1rem;
-        padding: 12px 25px;
-    }
-
-    section {
-        padding: 40px 15px;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
 }
