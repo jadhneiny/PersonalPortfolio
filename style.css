@@ -80,8 +80,7 @@ h2::after {
     align-items: center;
     text-align: center;
     background-image: url('background.JPG');
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     color: #fff;
     padding: 0 20px;
@@ -190,46 +189,46 @@ section + section {
     padding-top: 60px;
 }
 
-/* Certifications Section */
-#certifications ul li {
-    padding-left: 0;
-    font-size: 1.1rem;
+/* Contact Section */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Volunteering Section */
-#volunteering ul li {
-    padding-left: 0;
-    font-size: 1.1rem;
+.contact-section h2 {
+    color: #333;
+    margin-bottom: 30px;
 }
 
-/* Contact Form */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.form-group {
+    margin-bottom: 15px;
 }
 
-form input, form textarea {
+input, textarea {
+    width: 100%;
     padding: 15px;
-    border: 1px solid #ddd;
     border-radius: 8px;
+    border: 1px solid #ccc;
     font-size: 1rem;
 }
 
-form button {
-    padding: 15px;
+textarea {
+    min-height: 150px;
+}
+
+button {
     background-color: #ff5733;
     color: #fff;
-    font-size: 1.2rem;
+    padding: 15px 30px;
     border: none;
     border-radius: 8px;
+    font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-form button:hover {
+button:hover {
     background-color: #ff3300;
 }
 
