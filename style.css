@@ -9,18 +9,19 @@ html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #176B87;
+    background-color: #EEF5FF;
 }
 
 body {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 header {
-    background-color: #222;
+    background-color: #176B87;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -42,7 +43,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ff5733;
+    background-color: #86B6F6;
     border-radius: 5px;
 }
 
@@ -51,6 +52,9 @@ section {
     padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #EEF5FF;
+    border-radius: 12px;
+    margin-bottom: 40px;
 }
 
 /* Section Heading */
@@ -61,14 +65,14 @@ section {
 
 .section-heading h2 {
     font-size: 3rem;
-    color: #222;
+    color: #176B87;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
 .section-heading .section-subtitle {
     font-size: 1.2rem;
-    color: #777;
+    color: #555;
     margin-top: 0;
 }
 
@@ -91,6 +95,7 @@ section {
     align-items: center;
     color: #fff;
     text-align: center;
+    background-color: #B4D4FF;
 }
 
 .hero h1 {
@@ -105,7 +110,7 @@ section {
 }
 
 .cta {
-    background-color: #ff5733;
+    background-color: #176B87;
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
@@ -117,7 +122,7 @@ section {
 }
 
 .cta:hover {
-    background-color: #ff3300;
+    background-color: #86B6F6;
     transform: scale(1.05);
 }
 
@@ -129,7 +134,7 @@ section {
 }
 
 .experience-item, .education-item, .project-card, .certification-item, .volunteering-item {
-    background-color: #fff;
+    background-color: #B4D4FF;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -142,13 +147,13 @@ section {
 
 h3 {
     font-size: 1.8rem;
-    color: #333;
+    color: #176B87;
     margin-bottom: 10px;
 }
 
 p {
     font-size: 1rem;
-    color: #555;
+    color: #333;
 }
 
 /* Skills Section */
@@ -160,7 +165,7 @@ p {
 }
 
 .skill-box {
-    background-color: #fff;
+    background-color: #B4D4FF;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -174,7 +179,7 @@ p {
 
 /* Contact Section */
 .contact-section {
-    background-color: #f9f9f9;
+    background-color: #EEF5FF;
     padding: 50px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -200,9 +205,24 @@ textarea {
     min-height: 150px;
 }
 
+button {
+    background-color: #176B87;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #86B6F6;
+}
+
 /* Footer */
 footer {
-    background-color: #222;
+    background-color: #176B87;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -219,7 +239,7 @@ footer .social-icons a {
 }
 
 footer .social-icons a:hover {
-    color: #ff5733;
+    color: #B4D4FF;
 }
 
 /* Media Queries for smaller screens */
