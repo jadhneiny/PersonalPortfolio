@@ -16,19 +16,22 @@ html, body {
 
 body {
     flex-grow: 1;
-    line-height: 1.8;
+    line-height: 1.7;
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
+/* Header Section */
 header {
     background-color: #222;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-align: center;
     position: sticky;
     top: 0;
+    width: 100%;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -43,43 +46,14 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
     font-size: 1rem;
 }
 
 nav ul li a:hover {
     background-color: #ff5733;
+    color: #fff;
     border-radius: 5px;
-}
-
-nav ul li a:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px #ff5733;
-}
-
-/* Section Styling */
-section {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: #813a3a;
-    position: relative;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: #ff5733;
-    margin: 10px auto 0;
 }
 
 /* Hero Section */
@@ -100,7 +74,7 @@ h2::after {
 
 .hero h1 {
     font-size: 5rem;
-    font-weight: 700;
+    font-weight: bold;
     margin-bottom: 20px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     letter-spacing: 2px;
@@ -111,6 +85,7 @@ h2::after {
     margin-bottom: 40px;
     line-height: 1.6;
     letter-spacing: 1px;
+    max-width: 800px;
 }
 
 .cta {
@@ -131,6 +106,12 @@ h2::after {
 }
 
 /* About Section */
+#about {
+    background-color: #fff;
+    padding: 80px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
 #about p {
     max-width: 900px;
     margin: 0 auto;
@@ -139,30 +120,42 @@ h2::after {
     color: #555;
 }
 
-/* Experience, Projects, Skills, etc. */
-section h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #813a3a;
+#about h2 {
+    margin-bottom: 50px;
+}
+
+/* Experience Section */
+#experience {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+}
+
+#experience .experience-item {
+    margin-bottom: 40px;
+}
+
+#experience h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
     text-align: left;
 }
 
-ul {
+#experience ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
-ul li {
-    margin-bottom: 15px;
+#experience ul li {
+    margin-bottom: 10px;
     font-size: 1rem;
-    color: #666;
-    text-align: left;
     padding-left: 1.5rem;
     position: relative;
+    color: #666;
 }
 
-ul li::before {
+#experience ul li::before {
     content: "•";
     position: absolute;
     left: 0;
@@ -170,7 +163,57 @@ ul li::before {
     font-size: 1.5rem;
 }
 
+/* Projects Section */
+#projects {
+    background-color: #fff;
+    padding: 80px 20px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project-item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.project-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-item ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.project-item a {
+    color: #ff5733;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-item a:hover {
+    color: #ff3300;
+}
+
 /* Skills Section */
+#skills {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+}
+
 #skills ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -242,16 +285,15 @@ ul li::before {
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.2s;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-section button:hover {
     background-color: #ff3300;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.contact-section button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(255, 87, 51, 0.5);
 }
 
 /* Footer */
