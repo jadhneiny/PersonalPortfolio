@@ -80,14 +80,14 @@ h2::after {
     align-items: center;
     text-align: center;
     background-image: url('background.JPG');
-    background-size: cover; /* Adjust the background image to cover more space */
+    background-size: cover;
     background-position: center;
     color: #fff;
     padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
@@ -95,7 +95,7 @@ h2::after {
 }
 
 .hero p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 30px;
     line-height: 1.4;
     letter-spacing: 1px;
@@ -126,6 +126,69 @@ h2::after {
     color: #555;
 }
 
+/* Experience, Projects, Skills, etc. Sections */
+section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #813a3a;
+}
+
+ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    padding-left: 0;
+    color: #666;
+}
+
+/* Skills Section */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+#skills ul li {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills ul li:hover {
+    transform: translateY(-5px);
+}
+
+#skills ul li i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff5733;
+}
+
+/* Divider Lines for Sections */
+section {
+    margin-bottom: 60px;
+}
+
+section + section {
+    border-top: 1px solid #ddd;
+    padding-top: 60px;
+}
+
 /* Contact Section */
 .contact-section {
     background-color: #f9f9f9;
@@ -152,10 +215,6 @@ input, textarea {
 
 textarea {
     min-height: 150px;
-}
-
-.button-group {
-    text-align: center;
 }
 
 button {
@@ -202,11 +261,11 @@ footer .social-icons a:hover {
     }
 
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 
     .hero p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .cta {
