@@ -86,7 +86,7 @@ section {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 160vh;
     background-image: url('background.JPG');
     background-size: contain;
     background-position: center;
